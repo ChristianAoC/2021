@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+	<div id="a">Part 1: </div>
+	<div id="b">Part 2: </div>
+</body>
+<script>
+function read(textFile){
+	var xhr=new XMLHttpRequest;
+	xhr.open('GET',textFile);
+	xhr.onload=solve;
+	xhr.send()
+}
+
+function solve(){
+	var input=this.response.split(/\r?\n/);
+	var solution=0;
+	var prev=9999;
+	input.forEach(function(elem, i){
+		if(parseInt(elem)>parseInt(prev)) solution+=1;
+		prev=elem;
+	});
+	document.getElementById("a").innerHTML+=solution;
+
+	var solution=0;
+	var prev=9999;
+	var arr=[0,0,0];
+	var lastsum=9999;
+	input.forEach(function(elem, i){
+		var sum=0;
+		if(i>1 && i<input.length && i<10000) {
+			for(var j=i-2; j<i+1; j++) {
+				sum+=parseInt(input[j]);
+			}
+			if(sum>lastsum) solution+=1;
+			lastsum=sum;
+		}
+	});
+	document.getElementById("b").innerHTML+=solution;
+}
+
+read('input.txt');
+</script>
+</html>
