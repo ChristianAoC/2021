@@ -1,3 +1,17 @@
-#input = [int(line) for line in open('sample.txt', 'r')]
+""" Advent of Code solver class """
+with open('sample.txt', 'r', encoding='utf8') as file_handle:
+    aocinput = [int(line) for line in file_handle]
 
-### TASK 1
+def task1():
+    """ Task 1 solver """
+    result = 0
+    print(result)
+
+task1()
+
+def task2():
+    """ Task 2 solver """
+    result = 0
+    print(result)
+
+task2()
