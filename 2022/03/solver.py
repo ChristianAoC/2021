@@ -17,7 +17,8 @@ def task1():
     """ Task 1 solver """
     result = 0
     for r_s in rucksacks:
-        result += compare(r_s[0:int(len(r_s)/2)], r_s[int(len(r_s)/2):len(r_s)])
+        #result += compare(r_s[0:int(len(r_s)/2)], r_s[int(len(r_s)/2):len(r_s)])
+        result += set(r_s[0:int(len(r_s)/2)]).intersection(r_s[int(len(r_s)/2):len(r_s)]).pop()
     print(result)
 
 task1()
@@ -27,7 +28,8 @@ def task2():
     i = 0
     result = 0
     while i < len(rucksacks):
-        result += compare(rucksacks[i], rucksacks[i+1], rucksacks[i+2])
+        #result += compare(rucksacks[i], rucksacks[i+1], rucksacks[i+2])
+        result += set(rucksacks[i]).intersection(rucksacks[i+1], rucksacks[i+2]).pop()
         i+=3
     print(result)
 
