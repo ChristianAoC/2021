@@ -3,7 +3,7 @@ with open('input.txt', 'r', encoding='utf8') as file_handle:
     rucksacks = [[(ord(x)-96)%58 for x in line.strip()] for line in file_handle]
 
 def compare(r_one, r_two, r_three=""):
-    """ Compare rucksack contents to search for duplicates """
+    """ Compare rucksacks to search for duplicates """
     for first in sorted(r_one):
         for second in sorted(r_two):
             if first==second and r_three=="":
