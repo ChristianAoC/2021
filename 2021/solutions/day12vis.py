@@ -1,8 +1,9 @@
-#from IPython.display import Image
-#import graphviz as gv
-#import pylab
+# %%
+from IPython.display import Image
+import graphviz as gv
+import pylab
 
-input = [x for x in open('inputs/12.txt').read().strip().split('\n')]
+input = [x for x in open('../inputs/12.txt').read().strip().split('\n')]
 
 ### TASK 1
 
@@ -98,7 +99,7 @@ for line in paths:
 print("Task 2: "+str(len(newpaths))+" distinct paths")
 
 # Create Digraph object
-dot = Digraph()
+dot = gv.Digraph()
 
 # Add nodes 1 and 2
 for way in ways:
@@ -113,4 +114,4 @@ for edge, w in edges.items():
 #    dot.edge(edge.split('-')[0], edge.split('-')[1], label='('+str(w)+')')
 
 # Visualize the graph
-dot
+#dot

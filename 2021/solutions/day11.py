@@ -1,4 +1,4 @@
-input = [[int(y) for y in x] for x in open('inputs/11.txt').read().strip().split('\n')]
+input = [[int(y) for y in x] for x in open('../inputs/11.txt').read().strip().split('\n')]
 
 ### TASK 1
 

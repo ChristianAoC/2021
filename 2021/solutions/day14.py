@@ -1,5 +1,5 @@
 from string import ascii_uppercase
-input = [x for x in open('inputs/14.txt').read().strip().split('\n')]
+input = [x for x in open('../inputs/14.txt').read().strip().split('\n')]
 
 ### TASK 1
 

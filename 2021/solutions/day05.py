@@ -1,5 +1,5 @@
 import numpy as np
-input = [x for x in open('inputs/05.txt').read().strip().split('\n')]
+input = [x for x in open('../inputs/05.txt').read().strip().split('\n')]
 vents = []
 
 for line in input:

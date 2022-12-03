@@ -1,5 +1,5 @@
 import time
-input = [int(x) for x in open('inputs/06.txt').read().strip().split(',')]
+input = [int(x) for x in open('../inputs/06.txt').read().strip().split(',')]
 
 ### TASK 1
 

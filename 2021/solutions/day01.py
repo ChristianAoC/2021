@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.ndimage.interpolation import shift
 
-file = open("inputs/01.txt")
+file = open("../inputs/01.txt")
 input = file.readlines()
 
 #### TASK 1

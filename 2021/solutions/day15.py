@@ -1,4 +1,4 @@
-input = [[int(x) for x in line.strip()] for line in open('inputs/15test.txt', 'r')]
+input = [[int(x) for x in line.strip()] for line in open('../inputs/15test.txt', 'r')]
 
 ### TASK 1
 xmax = len(input[0])-1

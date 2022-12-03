@@ -1,9 +1,9 @@
+#%%
 #%matplotlib widget
-#
-#import matplotlib.pyplot as plt
-#import matplotlib.animation as animation
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
 
-input = [[int(y) for y in x] for x in open('inputs/11.txt').read().strip().split('\n')]
+input = [[int(y) for y in x] for x in open('../inputs/11.txt').read().strip().split('\n')]
 
 def flash(flashed, x, y):
   if flashed[x][y] == False:
@@ -59,4 +59,4 @@ def updatefig(i):
 ani = animation.FuncAnimation(fig, updatefig, interval=50)
 plt.show()
 
-ani.save('day11.mp4', writer = 'ffmpeg', fps = 10)
+#ani.save('day11.mp4', writer = 'ffmpeg', fps = 10)
