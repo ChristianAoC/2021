@@ -1,7 +1,7 @@
 from collections import defaultdict
 from operator import *
 
-input = [x.strip() for x in open('inputs/22test3.txt', 'r')]
+input = [x.strip() for x in open('../inputs/22test3.txt', 'r')]
 
 inp = []
 
@@ -25,7 +25,7 @@ cube = defaultdict(lambda: 'off')
 
 for line in inp:
   if line['toggle'] == 'on':
-    
+    break # this is actually not good, just to make it compile for now... FIX IT!
   for i in range(line['xs'], line['xe']+1):
     for j in range(line['ys'], line['ye']+1):
       for k in range(line['zs'], line['ze']+1):

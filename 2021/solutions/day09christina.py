@@ -1,6 +1,6 @@
 #fs = open(r"inputs/09.txt",'r')  
 #ls = fs.readlines()
-ls = [x for x in open('inputs/09.txt').read().strip().split('\n')]
+ls = [x for x in open('../inputs/09.txt').read().strip().split('\n')]
 
 sum_low_points = 0
 

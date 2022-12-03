@@ -1,4 +1,4 @@
-input = [int(x) for x in open('inputs/07.txt').read().strip().split(',')]
+input = [int(x) for x in open('../inputs/07.txt').read().strip().split(',')]
 
 ### TASK 1
 

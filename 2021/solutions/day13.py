@@ -1,4 +1,4 @@
-input = [x for x in open('inputs/13.txt').read().strip().split('\n')]
+input = [x for x in open('../inputs/13.txt').read().strip().split('\n')]
 
 ### TASK 1
 
@@ -11,9 +11,10 @@ for line in input:
     dots.append([int(x) for x in line.split(',')])
   elif 'fold' in line:
     xy = line.split('=')[0][-1]
-    fold = line.split('=')[1]
-    folds.append([xy,fold])
+    foldv = line.split('=')[1]
+    folds.append([xy,foldv])
 
+"""
 def fold(xy, line):
   newdots = []
   if xy == "y":
@@ -29,6 +30,7 @@ def fold(xy, line):
   else:
     newdots = dots
   return newdots
+"""
 
 def find_duplicates(arr):
   newarray = []

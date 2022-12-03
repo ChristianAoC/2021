@@ -1,7 +1,7 @@
 from collections import defaultdict
 from operator import *
 
-input = [x.strip() for x in open('inputs/22.txt', 'r')]
+input = [x.strip() for x in open('../inputs/22.txt', 'r')]
 
 inp = []
 

@@ -1,4 +1,4 @@
-input = [x for x in open('inputs/08.txt').read().strip().split('\n')]
+input = [x for x in open('../inputs/08.txt').read().strip().split('\n')]
 
 ### TASK 1
 
