@@ -1,6 +1,6 @@
 """ Advent of Code solver class """
 with open('sample.txt', 'r', encoding='utf8') as file_handle:
-    aocinput = [int(line) for line in file_handle]
+    inp = [int(line) for line in file_handle]
 
 def task1():
     """ Task 1 solver """
