@@ -1,5 +1,5 @@
 """ Advent of Code solver class """
-with open('sample.txt', 'r', encoding='utf8') as file_handle:
+with open('input.txt', 'r', encoding='utf8') as file_handle:
     inp1, inp2 = [x.split('\n') for x in file_handle.read().split('\n\n')]
 
 stack = []
@@ -21,8 +21,8 @@ def task1():
     """ Task 1 solver """
     result = ""
     stack_one = []
-    for cp in stack:
-        stack_one.append(cp.copy())
+    for copy in stack:
+        stack_one.append(copy.copy())
     for instr in instructions:
         i = 0
         while i < instr[0]:
