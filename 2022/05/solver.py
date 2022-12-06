@@ -1,7 +1,7 @@
 """ Advent of Code solver class """
 from copy import deepcopy
 
-with open('sample.txt', 'r', encoding='utf8') as file_handle:
+with open('reddit.txt', 'r', encoding='utf8') as file_handle:
     inp1, inp2 = [x.split('\n') for x in file_handle.read().split('\n\n')]
 
 stack = []
