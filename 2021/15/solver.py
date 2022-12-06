@@ -1,5 +1,6 @@
 """ Advent of Code solver class """
 from pprint import pprint
+import time
 
 with open('input.txt', 'r', encoding='utf8') as file_handle:
     inp = [[int(x) for x in line] for line in file_handle.read().splitlines()]
@@ -55,6 +56,9 @@ def dijkstra(g, start):
     
     cur = start
     shortest[start] = 0
+    count = 0
+    start = time.time()
+
     while unvisited:
         neighbours = [getTop(cur, g), getBot(cur, g), getLeft(cur, g), getRight(cur,g )]
         for nb in neighbours:
@@ -69,6 +73,9 @@ def dijkstra(g, start):
             if shortest[node] < nextv:
                 nextv, nextn = shortest[node], node
         cur = nextn
+        count += 1
+        if count%2500==0:
+            print(str(count//2500)+"% done after", round(time.time()-start), "seconds")
         if cur == fn(int(len(g[0])-1), int(len(g)-1), g):
             break
     return shortest[fn(int(len(g[0])-1), int(len(g)-1), g)]
@@ -78,7 +85,7 @@ def task1():
     result = dijkstra(inp, "000-000")
     print("Task 1:", result)
 
-task1()
+#task1()
 
 def task2():
     """ Task 2 solver """
