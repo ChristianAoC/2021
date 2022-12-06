@@ -5,13 +5,13 @@ with open('sample.txt', 'r', encoding='utf8') as file_handle:
 def task1():
     """ Task 1 solver """
     result = 0
-    print(result)
+    return result
 
-task1()
+print("Task 1:", task1())
 
 def task2():
     """ Task 2 solver """
     result = 0
-    print(result)
+    return result
 
-task2()
+print("Task 2:", task2())
