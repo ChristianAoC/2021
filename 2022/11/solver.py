@@ -5,7 +5,6 @@ from copy import deepcopy
 with open('input.txt', 'r', encoding='utf8') as file_handle:
     inp = file_handle.read().split("\n\n")
 
-
 inp_m = []
 for m in inp:
     op = {"Items": [], "Op": "", "Opval": 0, "Test": 0, "True": 0, "False": 0}
