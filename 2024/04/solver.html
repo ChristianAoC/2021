@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+	<div id="a">Part 1: </div>
+	<div id="b">Part 2: </div>
+</body>
+<script>
+function read(textFile){
+	var xhr=new XMLHttpRequest;
+	xhr.open('GET',textFile);
+	xhr.onload=solve;
+	xhr.send()
+}
+
+function solve(){
+	var input=this.response.split(/\r?\n/);
+	var solution=0;
+	document.getElementById("a").innerHTML+=solution;
+
+	solution=0;
+	document.getElementById("b").innerHTML+=solution;
+}
+
+read('sample.txt');
+</script>
+</html>
