@@ -15,7 +15,10 @@ print("Task 1:", task1())
 
 def task2():
     """ Task 2 solver """
-    inp3 = re.sub("don't\(\).*?(?:$|do\(\))", "", inp)
+    # last line needs a do() to be caught, and don't forget ? not greedy operator
+    inp3 = re.sub("don't\(\).*?do\(\)", "", inp+"do()")
+    # smarter:
+    #inp3 = re.sub("don't\(\).*?(?:$|do\(\))", "", inp)
     result = 0
     res = re.findall("mul\((\d+),(\d+)\)", inp3)
     for a, b in res:
