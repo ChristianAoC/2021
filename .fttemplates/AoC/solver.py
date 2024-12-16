@@ -14,7 +14,7 @@ def task1():
     return result
 
 start = time.time()
-print("Task 1 result:", task1(), f" (time: {(time.time()-start)*10**3:.03f}ms)")
+print("Task 1 result:", task1(), f"(time: {(time.time()-start)*10**3:.03f}ms)")
 
 def task2():
     """ Task 2 solver """
@@ -22,4 +22,4 @@ def task2():
     return result
 
 start = time.time()
-print("Task 2 result:", task2(), f" (time: {(time.time()-start)*10**3:.03f}ms)")
+print("Task 2 result:", task2(), f"(time: {(time.time()-start)*10**3:.03f}ms)")
